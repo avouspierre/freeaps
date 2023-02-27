@@ -25,8 +25,6 @@ extension Home {
         // Switch between Loops and Errors when tapping in statPanel
         @State var loopStatTitle = NSLocalizedString("Loops", comment: "Nr of Loops in statPanel")
 
-        public let paddingSpace: CGFloat = 15
-
         private var numberFormatter: NumberFormatter {
             let formatter = NumberFormatter()
             formatter.numberStyle = .decimal
@@ -75,7 +73,7 @@ extension Home {
             }
             .frame(maxWidth: .infinity)
             .padding(.top, geo.safeAreaInsets.top)
-            .padding(.bottom)
+            .padding(.bottom, 6)
             .background(Color.gray.opacity(0.2))
         }
 

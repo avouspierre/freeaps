@@ -29,6 +29,7 @@ extension Settings {
                         Text("Apple Health").navigationLink(to: .healthkit, from: self)
                     }
                     Text("Notifications").navigationLink(to: .notificationsConfig, from: self)
+                    Text("Fat And Protein Conversion").navigationLink(to: .fpuConfig, from: self)
                 }
 
                 Section(header: Text("Configuration")) {
@@ -98,10 +99,6 @@ extension Settings {
                                 .navigationLink(to: .configEditor(file: OpenAPS.Middleware.determineBasal), from: self)
                             Text("Statistics")
                                 .navigationLink(to: .configEditor(file: OpenAPS.Monitor.statistics), from: self)
-                            Text("Loop Cycles")
-                                .navigationLink(to: .configEditor(file: OpenAPS.Monitor.loopStats), from: self)
-                            Text("Glucose Data used for statistics")
-                                .navigationLink(to: .configEditor(file: OpenAPS.Monitor.glucose_data), from: self)
                             Text("Edit settings json")
                                 .navigationLink(to: .configEditor(file: OpenAPS.FreeAPS.settings), from: self)
                         }
